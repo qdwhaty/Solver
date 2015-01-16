@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>58753DA4-4259-4535-837F-2B8CFCB633B3</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Solver</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>08771EBB4A260EDD3AFC9272F8CAAD4695D65B3F</key>
+		<string>https://github.com/qdwhaty/Solver.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Solver.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>08771EBB4A260EDD3AFC9272F8CAAD4695D65B3F</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/qdwhaty/Solver.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>08771EBB4A260EDD3AFC9272F8CAAD4695D65B3F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>08771EBB4A260EDD3AFC9272F8CAAD4695D65B3F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Solver</string>
+		</dict>
+	</array>
+</dict>
+</plist>
