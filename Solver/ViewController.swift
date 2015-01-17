@@ -33,19 +33,10 @@ class ViewController: UIViewController, UITextFieldDelegate, ADBannerViewDelegat
         //ukryj systemowa klawiature
         __inputTfd.inputView = UIView( frame: CGRectMake(0, 0, 1, 1) );
         
-        //self.textfie.inputDelegate = self;
-        
-        //NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
-        
         //animacja klawiatury
         
-        UIView.animateWithDuration(0, delay: 0.0, usingSpringWithDamping: 0.6,
-            initialSpringVelocity: 0.5, options: nil, animations:
-            {
-                self.__keyboardView.transform = CGAffineTransformMakeTranslation(0,  self.__keyboardView.frame.height + 200)
-            }, completion: nil)
+        hideKeyboard(0, delay: 0);
         
-    
         //reklamy
         
         canDisplayBannerAds = false
@@ -152,7 +143,7 @@ class ViewController: UIViewController, UITextFieldDelegate, ADBannerViewDelegat
         }
         */
         
-        hideKeyboard();
+        hideKeyboard( 1, delay: 0 );
         
         self.view.endEditing(true);
         super.touchesBegan(touches, withEvent: event);
@@ -173,7 +164,7 @@ class ViewController: UIViewController, UITextFieldDelegate, ADBannerViewDelegat
     {
         println( "textFieldDidEndEditing" )
         
-        hideKeyboard();
+        hideKeyboard( 1, delay: 0 );
     }
     
     @IBAction func actionKeyTouchDown(sender: UIButton)
@@ -222,8 +213,8 @@ class ViewController: UIViewController, UITextFieldDelegate, ADBannerViewDelegat
         {
             self.view.endEditing(true);
 
-            hideKeyboard();
-            sendRequest();
+            hideKeyboard( 1, delay: 0 );
+            sendRequest( __inputTfd.text );
             
             return;
         }
@@ -233,22 +224,27 @@ class ViewController: UIViewController, UITextFieldDelegate, ADBannerViewDelegat
         __inputTfd.insertText( sender.titleLabel!.text! );
     }
     
-    func sendRequest()
+    func sendRequest( equation__:String )
     {
-        println("sendRequest");
+        println("sendRequest \( equation__ )");
         
-        __webView.loadRequest( NSURLRequest( URL: NSURL( string: "http://www.geteasysolution.com/" + __inputTfd.text )! ) );
+        __webView.loadRequest( NSURLRequest( URL: NSURL( string: "http://www.geteasysolution.com/" + equation__.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)! )! ) );
     }
     
-    func hideKeyboard()
+    func hideKeyboard( time:Float, delay:Float )
     {
         println("hideKeyboard");
         
-        UIView.animateWithDuration(0.7, delay: 0.0, usingSpringWithDamping: 0.6,
+        UIView.animateWithDuration( NSTimeInterval( time ), delay: NSTimeInterval( delay ), usingSpringWithDamping: 0.6,
             initialSpringVelocity: 0.5, options: nil, animations:
             {
                 self.__keyboardView.transform = CGAffineTransformMakeTranslation(0,  self.__keyboardView.frame.height + 100 )
-            }, completion: nil)
+            },
+            completion:
+            {
+                success in
+                println( "keyboard is hidden ");
+            })
         
     }
     
