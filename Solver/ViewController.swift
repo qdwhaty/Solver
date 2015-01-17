@@ -9,7 +9,7 @@
 import UIKit
 import iAd
 
-class ViewController: UIViewController, UITextFieldDelegate, ADBannerViewDelegate, ADInterstitialAdDelegate {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var chars: [UIButton]!
     @IBOutlet var __inputTfd: UITextField!
@@ -17,9 +17,6 @@ class ViewController: UIViewController, UITextFieldDelegate, ADBannerViewDelegat
     @IBOutlet var __webView: UIWebView!
     
     
-    
-    var bannerView:ADBannerView?
-    var interstitialAdView:ADInterstitialAd?
     
     override func viewDidLoad()
     {
@@ -38,45 +35,25 @@ class ViewController: UIViewController, UITextFieldDelegate, ADBannerViewDelegat
         hideKeyboard(0, delay: 0);
         
         //reklamy
+        // self.canDisplayBannerAds = true
+                self.interstitialPresentationPolicy = ADInterstitialPresentationPolicy.Automatic
+        //self.requestInterstitialAdPresentation()
+              //  self.interstitialPresentationPolicy = ADInterstitialPresentationPolicy.Manual
+               // self.requestInterstitialAdPresentation()
         
-        canDisplayBannerAds = false
-        bannerView?.delegate = self
-        bannerView?.hidden = true
         
-        interstitialAdView = ADInterstitialAd()
-        interstitialAdView!.delegate = self
-        
+        //self.requestInterstitialAdPresentation()
     }
     
-    func interstitialAdDidUnload(interstitialAd: ADInterstitialAd!)
-    {
-        //self.interstitialAdView.hidden = false;
+    override func viewWillAppear(animated: Bool) {
+        NSLog("Requesting")
+        self.requestInterstitialAdPresentation()
     }
     
-    func interstitialAd(interstitialAd: ADInterstitialAd!, didFailWithError error: NSError!)
-    {
-        
-    }
     
-    func interstitialAdActionShouldBegin(interstitialAd: ADInterstitialAd!, willLeaveApplication willLeave: Bool) -> Bool
-    {
-        return true;
-    }
     
-    func bannerViewDidLoadAd(banner: ADBannerView!) {
-        self.bannerView?.hidden = false
-    }
     
-    func bannerViewActionShouldBegin(banner: ADBannerView!, willLeaveApplication willLeave: Bool) -> Bool
-    {
-        return true
-    }
-    
-    func bannerView(banner: ADBannerView!, didFailToReceiveAdWithError error: NSError!) {
-        self.bannerView?.hidden = true
-    }
-    
-    override func viewDidLayoutSubviews()
+        override func viewDidLayoutSubviews()
     {
         //okrogle butony
         var c:UIButton;
@@ -133,6 +110,7 @@ class ViewController: UIViewController, UITextFieldDelegate, ADBannerViewDelegat
         
         self.view.endEditing(true);
         super.touchesBegan(touches, withEvent: event);
+        //self.requestInterstitialAdPresentation()
     }
     
     override func canBecomeFirstResponder() -> Bool {
@@ -200,7 +178,7 @@ class ViewController: UIViewController, UITextFieldDelegate, ADBannerViewDelegat
 
             hideKeyboard( 1, delay: 0 );
             sendRequest( __inputTfd.text );
-            
+            self.requestInterstitialAdPresentation()
             return;
         }
         
@@ -230,6 +208,7 @@ class ViewController: UIViewController, UITextFieldDelegate, ADBannerViewDelegat
                 success in
                 println( "keyboard is hidden ");
             })
+        //self.requestInterstitialAdPresentation()
     }
     
     func showKeyboard()

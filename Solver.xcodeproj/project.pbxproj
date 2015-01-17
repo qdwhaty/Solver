@@ -13,6 +13,7 @@
 		8B8625E61A69241900EA3BC4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B8625E51A69241900EA3BC4 /* Images.xcassets */; };
 		8B8625E91A69241900EA3BC4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B8625E71A69241900EA3BC4 /* LaunchScreen.xib */; };
 		8B8625F51A69241900EA3BC4 /* SolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8625F41A69241900EA3BC4 /* SolverTests.swift */; };
+		8BDA54701A6AEA5D009A7A6D /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BDA546F1A6AEA5D009A7A6D /* iAd.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		8B8625EE1A69241900EA3BC4 /* SolverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SolverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B8625F31A69241900EA3BC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B8625F41A69241900EA3BC4 /* SolverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolverTests.swift; sourceTree = "<group>"; };
+		8BDA546F1A6AEA5D009A7A6D /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BDA54701A6AEA5D009A7A6D /* iAd.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +62,7 @@
 		8B8625D01A69241900EA3BC4 = {
 			isa = PBXGroup;
 			children = (
+				8BDA546F1A6AEA5D009A7A6D /* iAd.framework */,
 				8B8625DB1A69241900EA3BC4 /* Solver */,
 				8B8625F11A69241900EA3BC4 /* SolverTests */,
 				8B8625DA1A69241900EA3BC4 /* Products */,
@@ -407,6 +411,7 @@
 				8B8625FA1A69241900EA3BC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8B8625FB1A69241900EA3BC4 /* Build configuration list for PBXNativeTarget "SolverTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +420,7 @@
 				8B8625FD1A69241900EA3BC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
