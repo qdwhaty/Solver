@@ -48,13 +48,17 @@ class ViewController: UIViewController, UITextFieldDelegate, ADBannerViewDelegat
     
         //reklamy
         
-        canDisplayBannerAds = true
+       // dispatch_async(dispatch_get_main_queue(), {[weak self] in
+    
+       //  dispatch_async(
+        bannerView?.delegate = self
         bannerView?.delegate = self
         bannerView?.hidden = true
         
         interstitialAdView = ADInterstitialAd()
         interstitialAdView!.delegate = self
-        
+    
+
     }
     
     func interstitialAdDidUnload(interstitialAd: ADInterstitialAd!)
@@ -189,7 +193,7 @@ class ViewController: UIViewController, UITextFieldDelegate, ADBannerViewDelegat
     {
         println( "textFieldDidEndEditing" )
         
-        //hideKeyboard();
+        hideKeyboard();
     }
     
     func textDidChange(textInput: UITextInput)
