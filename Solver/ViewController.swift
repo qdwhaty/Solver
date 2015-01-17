@@ -97,20 +97,6 @@ class ViewController: UIViewController, UITextFieldDelegate, ADBannerViewDelegat
         // Dispose of any resources that can be recreated.
     }
     
-    /*
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent)
-    {
-        println( "touchesBegan" );
-        
-        // __inputTfd.resignFirstResponder();
-        
-        hideKeyboard();
-        
-        self.view.endEditing(true);
-        super.touchesBegan(touches, withEvent: event);
-    }
-    */
-    
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent)
     {
         //println( "touchesBegan \( touches, event ) " );
@@ -198,7 +184,6 @@ class ViewController: UIViewController, UITextFieldDelegate, ADBannerViewDelegat
         
         if( key == "deleteAll")
         {
-            //str = "";
             __inputTfd.text = "";
             
             return;
@@ -224,18 +209,18 @@ class ViewController: UIViewController, UITextFieldDelegate, ADBannerViewDelegat
         __inputTfd.insertText( sender.titleLabel!.text! );
     }
     
-    func sendRequest( equation__:String )
+    func sendRequest( equationStr__:String )
     {
-        println("sendRequest \( equation__ )");
+        println("sendRequest \( equationStr__ )");
         
-        __webView.loadRequest( NSURLRequest( URL: NSURL( string: "http://www.geteasysolution.com/" + equation__.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)! )! ) );
+        __webView.loadRequest( NSURLRequest( URL: NSURL( string: "http://www.geteasysolution.com/" + equationStr__.stringByAddingPercentEscapesUsingEncoding( NSUTF8StringEncoding )! )! ) );
     }
     
-    func hideKeyboard( time:Float, delay:Float )
+    func hideKeyboard( time:NSTimeInterval, delay:NSTimeInterval )
     {
         println("hideKeyboard");
         
-        UIView.animateWithDuration( NSTimeInterval( time ), delay: NSTimeInterval( delay ), usingSpringWithDamping: 0.6,
+        UIView.animateWithDuration( time, delay: delay, usingSpringWithDamping: 0.6,
             initialSpringVelocity: 0.5, options: nil, animations:
             {
                 self.__keyboardView.transform = CGAffineTransformMakeTranslation(0,  self.__keyboardView.frame.height + 100 )
@@ -245,7 +230,6 @@ class ViewController: UIViewController, UITextFieldDelegate, ADBannerViewDelegat
                 success in
                 println( "keyboard is hidden ");
             })
-        
     }
     
     func showKeyboard()
