@@ -35,14 +35,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         hideKeyboard(0, delay: 0);
         
         //reklamy
-        // self.canDisplayBannerAds = true
+        
                 self.interstitialPresentationPolicy = ADInterstitialPresentationPolicy.Automatic
-        //self.requestInterstitialAdPresentation()
-              //  self.interstitialPresentationPolicy = ADInterstitialPresentationPolicy.Manual
-               // self.requestInterstitialAdPresentation()
         
         
-        //self.requestInterstitialAdPresentation()
+        
+        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -110,7 +108,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         self.view.endEditing(true);
         super.touchesBegan(touches, withEvent: event);
-        //self.requestInterstitialAdPresentation()
+        
     }
     
     override func canBecomeFirstResponder() -> Bool {
@@ -208,7 +206,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 success in
                 println( "keyboard is hidden ");
             })
-        //self.requestInterstitialAdPresentation()
+        
     }
     
     func showKeyboard()
