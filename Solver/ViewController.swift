@@ -48,17 +48,13 @@ class ViewController: UIViewController, UITextFieldDelegate, ADBannerViewDelegat
     
         //reklamy
         
-       // dispatch_async(dispatch_get_main_queue(), {[weak self] in
-    
-       //  dispatch_async(
-        bannerView?.delegate = self
+        canDisplayBannerAds = false
         bannerView?.delegate = self
         bannerView?.hidden = true
         
         interstitialAdView = ADInterstitialAd()
         interstitialAdView!.delegate = self
-    
-
+        
     }
     
     func interstitialAdDidUnload(interstitialAd: ADInterstitialAd!)
@@ -89,11 +85,8 @@ class ViewController: UIViewController, UITextFieldDelegate, ADBannerViewDelegat
         self.bannerView?.hidden = true
     }
     
-    
-    
-    func kolka ()
+    override func viewDidLayoutSubviews()
     {
-    
         //okrogle butony
         var c:UIButton;
         
@@ -105,20 +98,14 @@ class ViewController: UIViewController, UITextFieldDelegate, ADBannerViewDelegat
             c.layer.masksToBounds = true;
             c.layer.cornerRadius = c.frame.size.height / 2;
         }
-
-    
     }
-    override func viewDidLayoutSubviews()
-    {
-        
-        kolka()
-        
-           }
     
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     /*
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent)
     {
@@ -171,16 +158,9 @@ class ViewController: UIViewController, UITextFieldDelegate, ADBannerViewDelegat
         super.touchesBegan(touches, withEvent: event);
     }
     
-    
-    
-    
-    
-    
-    
     override func canBecomeFirstResponder() -> Bool {
         return false;
     }
-    
     
     func textFieldDidBeginEditing(textField: UITextField!)
     {
@@ -196,11 +176,6 @@ class ViewController: UIViewController, UITextFieldDelegate, ADBannerViewDelegat
         hideKeyboard();
     }
     
-    func textDidChange(textInput: UITextInput)
-    {
-        println("textDidChange");
-    }
-    
     @IBAction func actionKeyTouchDown(sender: UIButton)
     {
         println( sender );
@@ -210,19 +185,19 @@ class ViewController: UIViewController, UITextFieldDelegate, ADBannerViewDelegat
     
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool
     {
-        println("textField")
-        println( range.location.successor() );
-        
         return true;
+    }
+    
+    func clearKeyBackgroundColor( sender : UIButton )
+    {
+         sender.layer.backgroundColor = UIColor.whiteColor().CGColor;
     }
     
     @IBAction func actionKeyPressed(sender: UIButton)
     {
-        println( sender );
-        
-        sender.layer.backgroundColor = UIColor.whiteColor().CGColor;
-        
         println( sender.titleLabel?.text );
+        
+        clearKeyBackgroundColor( sender );
         
         var key:String = sender.titleLabel!.text!;
         //var str:String = __inputTfd.text;
@@ -247,6 +222,7 @@ class ViewController: UIViewController, UITextFieldDelegate, ADBannerViewDelegat
         {
             self.view.endEditing(true);
 
+            hideKeyboard();
             sendRequest();
             
             return;
@@ -254,21 +230,12 @@ class ViewController: UIViewController, UITextFieldDelegate, ADBannerViewDelegat
         
         //println( str )
         
-        __inputTfd.insertText( sender.titleLabel!.text! )
-        //__inputTfd.text = str;
-        
+        __inputTfd.insertText( sender.titleLabel!.text! );
     }
     
     func sendRequest()
     {
         println("sendRequest");
-        
-        hideKeyboard();
-        /*
-        let requestURL = NSURL( fileURLWithPath: "http://www.geteasysolution.com/" )
-        let request = NSURLRequest( requestURL !)
-        __webview.loadRequest( request )
-        */
         
         __webView.loadRequest( NSURLRequest( URL: NSURL( string: "http://www.geteasysolution.com/" + __inputTfd.text )! ) );
     }
@@ -276,8 +243,6 @@ class ViewController: UIViewController, UITextFieldDelegate, ADBannerViewDelegat
     func hideKeyboard()
     {
         println("hideKeyboard");
-        
-        //__keyboardView.frame.origin.y = self.view.frame.height - __keyboardView.frame.height;
         
         UIView.animateWithDuration(0.7, delay: 0.0, usingSpringWithDamping: 0.6,
             initialSpringVelocity: 0.5, options: nil, animations:

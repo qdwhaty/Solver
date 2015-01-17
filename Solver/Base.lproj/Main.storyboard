@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -34,7 +34,7 @@
                                 </variation>
                             </textField>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ao8-Xo-fCE">
-                                <rect key="frame" x="5" y="60" width="590" height="535"/>
+                                <rect key="frame" x="5" y="105" width="590" height="490"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="180" y="336" width="240" height="128"/>
@@ -58,6 +58,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="actionKeyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CIJ-r6-CcZ"/>
+                                                    <action selector="actionKeyTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="WBQ-lH-CVM"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSU-Jo-EFf">
@@ -69,6 +70,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="actionKeyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eG7-Bt-K22"/>
+                                                    <action selector="actionKeyTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="QcG-bh-J1N"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWb-1g-fet">
@@ -80,6 +82,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="actionKeyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="70X-Bs-GBu"/>
+                                                    <action selector="actionKeyTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="CRz-Mq-yrl"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DE2-Nv-pwp">
@@ -91,6 +94,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="actionKeyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8iv-Wr-Jb6"/>
+                                                    <action selector="actionKeyTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="dQ9-6i-DXk"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ib5-SK-Z8L">
@@ -102,6 +106,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="actionKeyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tJ2-9f-ZzP"/>
+                                                    <action selector="actionKeyTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="GaE-pZ-jQ8"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gbe-n3-41f">
@@ -113,6 +118,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="actionKeyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T8n-u2-Vzb"/>
+                                                    <action selector="actionKeyTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="0Oh-F2-2kL"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1qX-EM-XHf">
@@ -124,6 +130,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="actionKeyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b8M-Ml-Pjk"/>
+                                                    <action selector="actionKeyTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="NFx-MS-rCJ"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nz4-QU-Hmx">
@@ -135,6 +142,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="actionKeyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yJ5-5N-LgG"/>
+                                                    <action selector="actionKeyTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="EXK-CW-cVk"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2Z-aq-b5l">
@@ -146,6 +154,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="actionKeyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gmK-am-O8k"/>
+                                                    <action selector="actionKeyTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="76X-p0-iy5"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9p-tf-iOG">
@@ -157,6 +166,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="actionKeyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XH1-0b-EyO"/>
+                                                    <action selector="actionKeyTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="26Z-pw-Tn7"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EdP-YH-jxc">
@@ -168,6 +178,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="actionKeyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KAe-eu-Qgv"/>
+                                                    <action selector="actionKeyTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="ekY-kZ-qvQ"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EDs-ol-gYP">
@@ -179,6 +190,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="actionKeyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1oY-So-mYC"/>
+                                                    <action selector="actionKeyTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="x0J-tl-41b"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4w-T4-6k6">
@@ -190,6 +202,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="actionKeyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4KE-cz-wet"/>
+                                                    <action selector="actionKeyTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="CV3-Wm-MYq"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIC-AJ-ou8">
@@ -201,6 +214,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="actionKeyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pkO-MW-7Tq"/>
+                                                    <action selector="actionKeyTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="Qij-Oo-aOc"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyE-sx-4kF">
@@ -212,17 +226,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="actionKeyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kNe-dZ-00d"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WwK-qC-RZf">
-                                                <rect key="frame" x="224" y="224" width="69" height="69"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <state key="normal" title="/" backgroundImage="dzielenie">
-                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="actionKeyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eqE-g1-Y3A"/>
+                                                    <action selector="actionKeyTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="kQp-D8-aYB"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UpF-4O-8KR">
@@ -234,6 +238,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="actionKeyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uYa-vK-y2O"/>
+                                                    <action selector="actionKeyTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="9Q1-Vf-kdI"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I8D-tY-SXS">
@@ -245,6 +250,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="actionKeyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dhk-er-sPD"/>
+                                                    <action selector="actionKeyTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="Fzo-PQ-Zqj"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gak-R6-P3D">
@@ -256,6 +262,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="actionKeyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8LP-Dr-LMm"/>
+                                                    <action selector="actionKeyTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="MYD-w2-ug7"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLe-Uy-DgJ">
@@ -267,6 +274,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="actionKeyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="weF-gt-vsv"/>
+                                                    <action selector="actionKeyTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="cFb-v7-x2V"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qFJ-Xl-yEU">
@@ -278,6 +286,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="actionKeyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZLh-mw-X5d"/>
+                                                    <action selector="actionKeyTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="qfe-Z4-Jsv"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NuA-M5-MZx">
@@ -289,7 +298,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="actionKeyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bPc-jb-wDm"/>
-                                                    <action selector="actionKeyTouchDown:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TXM-v1-t0i"/>
+                                                    <action selector="actionKeyTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="mHP-a8-34u"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="euV-ek-3qg">
@@ -301,6 +310,19 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="actionKeyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NKh-Do-v6e"/>
+                                                    <action selector="actionKeyTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="nDN-qf-Bp4"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WwK-qC-RZf">
+                                                <rect key="frame" x="224" y="224" width="69" height="69"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="/" backgroundImage="dzielenie">
+                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="actionKeyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eqE-g1-Y3A"/>
+                                                    <action selector="actionKeyTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="DE5-2m-01D"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -422,7 +444,6 @@
                                                 <include reference="H4w-T4-6k6"/>
                                                 <include reference="dIC-AJ-ou8"/>
                                                 <include reference="pyE-sx-4kF"/>
-                                                <include reference="WwK-qC-RZf"/>
                                                 <include reference="UpF-4O-8KR"/>
                                                 <include reference="I8D-tY-SXS"/>
                                                 <include reference="gak-R6-P3D"/>
@@ -430,6 +451,7 @@
                                                 <include reference="qFJ-Xl-yEU"/>
                                                 <include reference="NuA-M5-MZx"/>
                                                 <include reference="euV-ek-3qg"/>
+                                                <include reference="WwK-qC-RZf"/>
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=compact">
@@ -449,7 +471,6 @@
                                                 <include reference="H4w-T4-6k6"/>
                                                 <include reference="dIC-AJ-ou8"/>
                                                 <include reference="pyE-sx-4kF"/>
-                                                <include reference="WwK-qC-RZf"/>
                                                 <include reference="UpF-4O-8KR"/>
                                                 <include reference="I8D-tY-SXS"/>
                                                 <include reference="gak-R6-P3D"/>
@@ -457,6 +478,7 @@
                                                 <include reference="qFJ-Xl-yEU"/>
                                                 <include reference="NuA-M5-MZx"/>
                                                 <include reference="euV-ek-3qg"/>
+                                                <include reference="WwK-qC-RZf"/>
                                             </mask>
                                         </variation>
                                     </view>
@@ -508,9 +530,9 @@
                                 <variation key="heightClass=regular" constant="10"/>
                                 <variation key="heightClass=regular-widthClass=compact" constant="5"/>
                             </constraint>
-                            <constraint firstItem="Ao8-Xo-fCE" firstAttribute="top" secondItem="JUM-zX-I7D" secondAttribute="bottom" constant="5" id="CMq-rF-O1y">
-                                <variation key="heightClass=regular" constant="10"/>
-                                <variation key="heightClass=regular-widthClass=compact" constant="5"/>
+                            <constraint firstItem="Ao8-Xo-fCE" firstAttribute="top" secondItem="JUM-zX-I7D" secondAttribute="bottom" constant="50" id="CMq-rF-O1y">
+                                <variation key="heightClass=regular" constant="100"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
                             </constraint>
                             <constraint firstItem="JUM-zX-I7D" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="N0b-Zs-Vu2">
                                 <variation key="heightClass=regular" constant="10"/>
