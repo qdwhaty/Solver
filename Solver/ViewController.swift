@@ -1,10 +1,7 @@
 //
 //  ViewController.swift
 //  KeyboardCustom
-//
-//  Created by edi on 09.01.2015.
-//  Copyright (c) 2015 edi. All rights reserved.
-//
+
 
 import UIKit
 import iAd
