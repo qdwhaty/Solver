@@ -23,6 +23,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UIWebViewDelegate {
     {
         super.viewDidLoad()
         
+        UIApplication.sharedApplication().statusBarStyle = .LightContent;
+        
         __webView.delegate = self;
         //__webView.loadRequest( NSURLRequest( URL: NSURL( string: "http://www.geteasysolution.com/")! ) );
         __webView.loadHTMLString( NSLocalizedString("Help", comment:"" ), baseURL:nil );
@@ -175,7 +177,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIWebViewDelegate {
         UIView.animateWithDuration( time, delay: delay, usingSpringWithDamping: 0.6,
             initialSpringVelocity: 0.5, options: nil, animations:
             {
-                self.__keyboardView.transform = CGAffineTransformMakeTranslation(0,  self.__keyboardView.frame.height + 100 )
+                self.__keyboardView.transform = CGAffineTransformMakeTranslation(0,  self.__keyboardView.frame.height + 200 )
             },
             completion:
             {
