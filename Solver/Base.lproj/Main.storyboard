@@ -541,7 +541,7 @@
                             </constraint>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="M4s-Oz-vtG" secondAttribute="bottom" constant="50" id="ULc-pJ-I0x">
                                 <variation key="heightClass=regular" constant="50"/>
-                                <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="10"/>
                             </constraint>
                             <constraint firstAttribute="trailing" secondItem="Ao8-Xo-fCE" secondAttribute="trailing" constant="5" id="WjX-N5-bnu">
                                 <variation key="heightClass=regular" constant="10"/>
