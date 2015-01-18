@@ -3,7 +3,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -29,16 +28,13 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="223" y="385" width="153" height="30"/>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="223" y="385" width="153" height="60"/>
                                 </variation>
                             </textField>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ao8-Xo-fCE">
                                 <rect key="frame" x="5" y="105" width="590" height="490"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="180" y="336" width="240" height="128"/>
-                                </variation>
                             </webView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M4s-Oz-vtG" userLabel="Keyboard View">
                                 <rect key="frame" x="66" y="82" width="468" height="468"/>
@@ -509,7 +505,7 @@
                                     <constraint firstAttribute="bottom" secondItem="5BK-Gb-K8r" secondAttribute="bottom" id="pHV-sR-cp6"/>
                                     <constraint firstAttribute="trailing" secondItem="5BK-Gb-K8r" secondAttribute="trailing" id="wDO-1a-Ht8"/>
                                 </constraints>
-                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                <variation key="heightClass=regular" misplaced="YES">
                                     <rect key="frame" x="50" y="150" width="500" height="500"/>
                                     <mask key="subviews">
                                         <include reference="5BK-Gb-K8r"/>
@@ -538,9 +534,9 @@
                                 <variation key="heightClass=regular" constant="10"/>
                                 <variation key="heightClass=regular-widthClass=compact" constant="5"/>
                             </constraint>
-                            <constraint firstAttribute="trailingMargin" secondItem="M4s-Oz-vtG" secondAttribute="trailing" constant="50" id="NcP-H2-n50">
+                            <constraint firstAttribute="trailing" secondItem="M4s-Oz-vtG" secondAttribute="trailing" constant="50" id="NcP-H2-n50">
                                 <variation key="heightClass=regular" constant="100"/>
-                                <variation key="heightClass=regular-widthClass=compact" constant="10"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                             </constraint>
                             <constraint firstAttribute="trailing" secondItem="JUM-zX-I7D" secondAttribute="trailing" constant="5" id="T32-HK-PeR">
                                 <variation key="heightClass=regular" constant="10"/>
@@ -558,9 +554,9 @@
                                 <variation key="heightClass=regular" constant="10"/>
                                 <variation key="heightClass=regular-widthClass=compact" constant="5"/>
                             </constraint>
-                            <constraint firstItem="M4s-Oz-vtG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="qe9-Ww-17i">
+                            <constraint firstItem="M4s-Oz-vtG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="qe9-Ww-17i">
                                 <variation key="heightClass=regular" constant="100"/>
-                                <variation key="heightClass=regular-widthClass=compact" constant="10"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                             </constraint>
                             <constraint firstItem="Ao8-Xo-fCE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="qog-KM-HdD">
                                 <variation key="heightClass=regular" constant="10"/>

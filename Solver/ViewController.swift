@@ -21,46 +21,34 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
-        println( chars.count );
         __webView.loadRequest( NSURLRequest( URL: NSURL( string: "http://www.geteasysolution.com/")! ) );
+        
+        //ukryj systemowa klawiature / fake na klawiature
         __inputTfd.delegate = self;
-       
-        //ukryj systemowa klawiature
         __inputTfd.inputView = UIView( frame: CGRectMake(0, 0, 1, 1) );
         
-        //animacja klawiatury
-        
+        //schowanie klawiatury
         hideKeyboard(0, delay: 0);
         
         //reklamy
         
-                self.interstitialPresentationPolicy = ADInterstitialPresentationPolicy.Automatic
-        
-        
-        
-        
+        self.interstitialPresentationPolicy = ADInterstitialPresentationPolicy.Automatic;
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(animated: Bool)
+    {
         NSLog("Requesting")
         self.requestInterstitialAdPresentation()
     }
     
-    
-    
-    
-        override func viewDidLayoutSubviews()
+    override func viewDidLayoutSubviews()
     {
-        //okrogle butony
+        //okragle butony
         var c:UIButton;
         
         for c in chars
         {
-            //println( c.titleLabel?.text );
-            //println( c.frame.size.width );
-            
             c.layer.masksToBounds = true;
             c.layer.cornerRadius = c.frame.size.height / 2;
         }
@@ -88,21 +76,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         {
             return;
         }
-        
-        /*
-        for touch: AnyObject in touches
-        {
-        let location = touch.locationInView( self.view )
-        //let touchedNode = self.nodeAtPoint(location)
-        //println( "touch, \( touch, location ) " );
-        
-        if( touch.view is UIImageView )
-        {
-        println("tlo")
-        return;
-        }
-        }
-        */
         
         hideKeyboard( 1, delay: 0 );
         
@@ -153,10 +126,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         clearKeyBackgroundColor( sender );
         
         var key:String = sender.titleLabel!.text!;
-        //var str:String = __inputTfd.text;
-        
-        //var pos = __inputTfd.getpo //caretRectForPosition( __inputTfd.selectedTextRange?.start );
-        //println( "pos: \(pos)" );
         
         if( key == "deleteAll")
         {
@@ -204,7 +173,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             completion:
             {
                 success in
-                println( "keyboard is hidden ");
+                println( "keyboard is closed ");
             })
         
     }
@@ -217,7 +186,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
             initialSpringVelocity: 0.5, options: nil, animations:
             {
                 self.__keyboardView.transform = CGAffineTransformMakeTranslation(0, 0)
-            }, completion: nil)
+            },
+            completion:
+            {
+                success in
+                println( "keyboard is open ");
+            })
         
     }
 }
