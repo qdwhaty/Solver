@@ -23,7 +23,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIWebViewDelegate {
     {
         super.viewDidLoad()
         
-        UIApplication.sharedApplication().statusBarStyle = .LightContent;
+        UIApplication.sharedApplication().statusBarHidden = true;
         
         __webView.delegate = self;
         //__webView.loadRequest( NSURLRequest( URL: NSURL( string: "http://www.geteasysolution.com/")! ) );
@@ -47,6 +47,10 @@ class ViewController: UIViewController, UITextFieldDelegate, UIWebViewDelegate {
     {
         NSLog("Requesting")
         self.requestInterstitialAdPresentation()
+    }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
     }
     
     override func viewDidLayoutSubviews()
