@@ -24,7 +24,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UIWebViewDelegate {
         super.viewDidLoad()
         
         __webView.delegate = self;
-        __webView.loadRequest( NSURLRequest( URL: NSURL( string: "http://www.geteasysolution.com/")! ) );
+        //__webView.loadRequest( NSURLRequest( URL: NSURL( string: "http://www.geteasysolution.com/")! ) );
+        __webView.loadHTMLString( NSLocalizedString("Help", comment:"" ), baseURL:nil );
         
         //ukryj systemowa klawiature / fake na klawiaturze
         __inputTfd.delegate = self;
@@ -33,6 +34,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIWebViewDelegate {
         //schowanie klawiatury
         hideKeyboard(0, delay: 0);
         
+        println( NSLocalizedString( "Help", comment:"" ) )
         //reklamy
         
         canDisplayBannerAds = true;
@@ -146,6 +148,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UIWebViewDelegate {
         {
             self.view.endEditing(true);
             
+            __counter += 1;
+            
             hideKeyboard( 1, delay: 0 );
             sendRequest( __inputTfd.text );
             
@@ -194,9 +198,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIWebViewDelegate {
                 success in
                 println( "keyboard is open ");
             })
-        
     }
-    
     
     //////////////////////////////////////////////////////////
     // uiwebview delegate funcs
@@ -204,9 +206,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIWebViewDelegate {
     
     func webViewDidFinishLoad(webView: UIWebView)
     {
-        println( " content of website is loaded \( __counter % 5 )" );
-        
-        __counter += 1;
+        println( " content of website is loaded \( __counter )" );
         
         if( __counter % 5 == 1 )
         {
