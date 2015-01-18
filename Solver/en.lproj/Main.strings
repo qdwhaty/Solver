@@ -1,0 +1,72 @@
+/* Class = "IBUIButton"; normalTitle = "6"; ObjectID = "1qX-EM-XHf"; */
+"1qX-EM-XHf.normalTitle" = "6";
+
+/* Class = "IBUIButton"; normalTitle = "+"; ObjectID = "DE2-Nv-pwp"; */
+"DE2-Nv-pwp.normalTitle" = "+";
+
+/* Class = "IBUIButton"; normalTitle = "*"; ObjectID = "EDs-ol-gYP"; */
+"EDs-ol-gYP.normalTitle" = "*";
+
+/* Class = "IBUIButton"; normalTitle = "3"; ObjectID = "EdP-YH-jxc"; */
+"EdP-YH-jxc.normalTitle" = "3";
+
+/* Class = "IBUIButton"; normalTitle = "5"; ObjectID = "Gbe-n3-41f"; */
+"Gbe-n3-41f.normalTitle" = "5";
+
+/* Class = "IBUIButton"; normalTitle = "0"; ObjectID = "H4w-T4-6k6"; */
+"H4w-T4-6k6.normalTitle" = "0";
+
+/* Class = "IBUIButton"; normalTitle = "("; ObjectID = "I8D-tY-SXS"; */
+"I8D-tY-SXS.normalTitle" = "(";
+
+/* Class = "IBUIButton"; normalTitle = "4"; ObjectID = "Ib5-SK-Z8L"; */
+"Ib5-SK-Z8L.normalTitle" = "4";
+
+/* Class = "IBUITextField"; placeholder = "lala"; ObjectID = "JUM-zX-I7D"; */
+"JUM-zX-I7D.placeholder" = "type in equation to get solution";
+
+/* Class = "IBUIButton"; normalTitle = "del"; ObjectID = "NuA-M5-MZx"; */
+"NuA-M5-MZx.normalTitle" = "del";
+
+/* Class = "IBUIButton"; normalTitle = "^"; ObjectID = "UpF-4O-8KR"; */
+"UpF-4O-8KR.normalTitle" = "^";
+
+/* Class = "IBUIButton"; normalTitle = "enter"; ObjectID = "VLe-Uy-DgJ"; */
+"VLe-Uy-DgJ.normalTitle" = "enter";
+
+/* Class = "IBUIButton"; normalTitle = "/"; ObjectID = "WwK-qC-RZf"; */
+"WwK-qC-RZf.normalTitle" = "/";
+
+/* Class = "IBUIButton"; normalTitle = "2"; ObjectID = "Y9p-tf-iOG"; */
+"Y9p-tf-iOG.normalTitle" = "2";
+
+/* Class = "IBUIButton"; normalTitle = "8"; ObjectID = "ZSU-Jo-EFf"; */
+"ZSU-Jo-EFf.normalTitle" = "8";
+
+/* Class = "IBUIButton"; normalTitle = "1"; ObjectID = "b2Z-aq-b5l"; */
+"b2Z-aq-b5l.normalTitle" = "1";
+
+/* Class = "IBUIButton"; normalTitle = "x"; ObjectID = "dIC-AJ-ou8"; */
+"dIC-AJ-ou8.normalTitle" = "x";
+
+/* Class = "IBUIButton"; normalTitle = "="; ObjectID = "euV-ek-3qg"; */
+"euV-ek-3qg.normalTitle" = "=";
+
+/* Class = "IBUIButton"; normalTitle = ")"; ObjectID = "gak-R6-P3D"; */
+"gak-R6-P3D.normalTitle" = ")";
+
+/* Class = "IBUIButton"; normalTitle = "-"; ObjectID = "nz4-QU-Hmx"; */
+"nz4-QU-Hmx.normalTitle" = "-";
+
+/* Class = "IBUIButton"; normalTitle = "."; ObjectID = "pyE-sx-4kF"; */
+"pyE-sx-4kF.normalTitle" = ".";
+
+/* Class = "IBUIButton"; normalTitle = "deleteAll"; ObjectID = "qFJ-Xl-yEU"; */
+"qFJ-Xl-yEU.normalTitle" = "deleteAll";
+
+/* Class = "IBUIButton"; normalTitle = "9"; ObjectID = "rWb-1g-fet"; */
+"rWb-1g-fet.normalTitle" = "9";
+
+/* Class = "IBUIButton"; normalTitle = "7"; ObjectID = "uS8-kW-ff9"; */
+"uS8-kW-ff9.normalTitle" = "7";
+
