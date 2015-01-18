@@ -9,22 +9,24 @@
 import UIKit
 import iAd
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController, UITextFieldDelegate, UIWebViewDelegate {
     
     @IBOutlet var chars: [UIButton]!
     @IBOutlet var __inputTfd: UITextField!
     @IBOutlet var __keyboardView : UIView!
     @IBOutlet var __webView: UIWebView!
     
+    private var __counter:uint = 0;
     
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
+        __webView.delegate = self;
         __webView.loadRequest( NSURLRequest( URL: NSURL( string: "http://www.geteasysolution.com/")! ) );
         
-        //ukryj systemowa klawiature / fake na klawiature
+        //ukryj systemowa klawiature / fake na klawiaturze
         __inputTfd.delegate = self;
         __inputTfd.inputView = UIView( frame: CGRectMake(0, 0, 1, 1) );
         
@@ -33,7 +35,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         //reklamy
         
-        self.interstitialPresentationPolicy = ADInterstitialPresentationPolicy.Automatic;
+        canDisplayBannerAds = true;
+        interstitialPresentationPolicy = ADInterstitialPresentationPolicy.Automatic;
     }
     
     override func viewWillAppear(animated: Bool)
@@ -142,10 +145,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         else if( key == "enter")
         {
             self.view.endEditing(true);
-
+            
             hideKeyboard( 1, delay: 0 );
             sendRequest( __inputTfd.text );
-            self.requestInterstitialAdPresentation()
+            
             return;
         }
         
@@ -175,7 +178,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 success in
                 println( "keyboard is closed ");
             })
-        
     }
     
     func showKeyboard()
@@ -194,5 +196,26 @@ class ViewController: UIViewController, UITextFieldDelegate {
             })
         
     }
+    
+    
+    //////////////////////////////////////////////////////////
+    // uiwebview delegate funcs
+    //////////////////////////////////////////////////////////
+    
+    func webViewDidFinishLoad(webView: UIWebView)
+    {
+        println( " content of website is loaded \( __counter % 5 )" );
+        
+        __counter += 1;
+        
+        if( __counter % 5 == 1 )
+        {
+            // wywolanie interstitialAd
+            self.requestInterstitialAdPresentation()
+            
+        }
+        
+    }
+    
 }
 
