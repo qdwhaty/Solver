@@ -545,7 +545,7 @@
                             </constraint>
                             <constraint firstAttribute="trailing" secondItem="Ao8-Xo-fCE" secondAttribute="trailing" constant="5" id="WjX-N5-bnu">
                                 <variation key="heightClass=regular" constant="10"/>
-                                <variation key="heightClass=regular-widthClass=compact" constant="5"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                             </constraint>
                             <constraint firstItem="JUM-zX-I7D" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="5" id="ebz-p0-1ad">
                                 <variation key="heightClass=regular" constant="10"/>
@@ -557,7 +557,7 @@
                             </constraint>
                             <constraint firstItem="Ao8-Xo-fCE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="qog-KM-HdD">
                                 <variation key="heightClass=regular" constant="10"/>
-                                <variation key="heightClass=regular-widthClass=compact" constant="5"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                             </constraint>
                         </constraints>
                         <variation key="heightClass=regular">

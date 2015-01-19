@@ -1,10 +1,6 @@
 //
 //  AppDelegate.swift
 //  Solver
-//
-//  Created by Jaroslaw Konieczny on 16.01.2015.
-//  Copyright (c) 2015 Jaroslaw Konieczny. All rights reserved.
-//
 
 import UIKit
 
