@@ -13,9 +13,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UIWebViewDelegate {
     @IBOutlet var __keyboardView : UIView!
     @IBOutlet var __webView: UIWebView!
     
-    private var __counter:uint = 0;
+    private var __counter:uint = 0
     
-    
+    var reklamagoogle: GADInterstitial = GADInterstitial()
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -38,6 +38,13 @@ class ViewController: UIViewController, UITextFieldDelegate, UIWebViewDelegate {
         
         canDisplayBannerAds = true;
         interstitialPresentationPolicy = ADInterstitialPresentationPolicy.Automatic;
+        //reklamy googla
+        
+        reklamagoogle.adUnitID = "ca-app-pub-3940256099942544/4411468910"
+        var zapytaniegoogla : GADRequest = GADRequest()
+         reklamagoogle.loadRequest(zapytaniegoogla)
+        
+    
     }
     
     override func viewWillAppear(animated: Bool)
@@ -138,6 +145,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UIWebViewDelegate {
         if( key == "deleteAll")
         {
             __inputTfd.text = "";
+            
+            //dodamreklamegoogla
+            reklamagoogle.presentFromRootViewController(self)
             
             return;
         }
