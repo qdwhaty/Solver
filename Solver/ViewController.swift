@@ -49,7 +49,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UIWebViewDelegate, 
         self.requestInterstitialAdPresentation()
     }
     
-    override func prefersStatusBarHidden() -> Bool {
+    override func prefersStatusBarHidden() -> Bool
+    {
         return true
     }
     
@@ -142,8 +143,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UIWebViewDelegate, 
         {
             __inputTfd.text = "";
             
-            __admobAds.presentFromRootViewController( self );
-            
             return;
         }
         else if( key == "del" )
@@ -172,6 +171,22 @@ class ViewController: UIViewController, UITextFieldDelegate, UIWebViewDelegate, 
     func sendRequest( equationStr__:String )
     {
         println("sendRequest \( equationStr__ )");
+        
+        if( __counter % 5 == 1 )
+        {
+            // wywolanie interstitialAd
+            //self.requestInterstitialAdPresentation()
+            
+            // wywolanie admoba
+            //
+            
+            println( "hasbeenUsed: \( __admobAds.hasBeenUsed )" );
+            
+            if( !__admobAds.hasBeenUsed && __admobAds.isReady )
+            {
+                __admobAds.presentFromRootViewController( self );
+            }
+        }
         
         __webView.loadRequest( NSURLRequest( URL: NSURL( string: "http://www.geteasysolution.com/" + equationStr__.stringByAddingPercentEscapesUsingEncoding( NSUTF8StringEncoding )! )! ) );
     }
@@ -216,17 +231,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIWebViewDelegate, 
     {
         println( " content of website is loaded \( __counter )" );
         
-        if( __counter % 5 == 1 )
-        {
-            // wywolanie interstitialAd
-            self.requestInterstitialAdPresentation()
-            
-            // wywolanie admoba
-            if( __admobAds.isReady )
-            {
-                __admobAds.presentFromRootViewController( self );
-            }
-        }
+        
     }
     
     ///
@@ -236,7 +241,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UIWebViewDelegate, 
     func createAndLoadInterstitial() -> GADInterstitial
     {
         //reklamy googla
-        let admobAds = GADInterstitial();
+        //__admobAds = nil;
+        var admobAds = GADInterstitial();
         admobAds.delegate = self;
         admobAds.adUnitID = "ca-app-pub-3940256099942544/4411468910";
         let request:GADRequest = GADRequest();
@@ -248,6 +254,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UIWebViewDelegate, 
     
     func interstitialDidDismissScreen( ad: GADInterstitial! )
     {
+        println( "interstitialDidDismissScreen" );
+        
         __admobAds = createAndLoadInterstitial();
     }
     
