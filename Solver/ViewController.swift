@@ -6,16 +6,17 @@
 import UIKit
 import iAd
 
-class ViewController: UIViewController, UITextFieldDelegate, UIWebViewDelegate {
+class ViewController: UIViewController, UITextFieldDelegate, UIWebViewDelegate, GADInterstitialDelegate
+{
     
     @IBOutlet var chars: [UIButton]!
     @IBOutlet var __inputTfd: UITextField!
     @IBOutlet var __keyboardView : UIView!
     @IBOutlet var __webView: UIWebView!
     
+    private var __admobAds: GADInterstitial!
     private var __counter:uint = 0
     
-    var reklamagoogle: GADInterstitial = GADInterstitial()
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -34,17 +35,12 @@ class ViewController: UIViewController, UITextFieldDelegate, UIWebViewDelegate {
         hideKeyboard(0, delay: 0);
         
         println( NSLocalizedString( "Help", comment:"" ) )
-        //reklamy
         
+        //reklamy
         canDisplayBannerAds = true;
         interstitialPresentationPolicy = ADInterstitialPresentationPolicy.Automatic;
-        //reklamy googla
         
-        reklamagoogle.adUnitID = "ca-app-pub-3940256099942544/4411468910"
-        var zapytaniegoogla : GADRequest = GADRequest()
-         reklamagoogle.loadRequest(zapytaniegoogla)
-        
-    
+        __admobAds = createAndLoadInterstitial();
     }
     
     override func viewWillAppear(animated: Bool)
@@ -146,8 +142,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIWebViewDelegate {
         {
             __inputTfd.text = "";
             
-            //dodamreklamegoogla
-            reklamagoogle.presentFromRootViewController(self)
+            __admobAds.presentFromRootViewController( self );
             
             return;
         }
@@ -226,8 +221,34 @@ class ViewController: UIViewController, UITextFieldDelegate, UIWebViewDelegate {
             // wywolanie interstitialAd
             self.requestInterstitialAdPresentation()
             
+            // wywolanie admoba
+            if( __admobAds.isReady )
+            {
+                __admobAds.presentFromRootViewController( self );
+            }
         }
+    }
+    
+    ///
+    // admob and delegate funcs
+    ///
+    
+    func createAndLoadInterstitial() -> GADInterstitial
+    {
+        //reklamy googla
+        let admobAds = GADInterstitial();
+        admobAds.delegate = self;
+        admobAds.adUnitID = "ca-app-pub-3940256099942544/4411468910";
+        let request:GADRequest = GADRequest();
+        request.testDevices = ["GAD_SIMULATOR_ID"];
+        admobAds.loadRequest( GADRequest() );
         
+        return admobAds;
+    }
+    
+    func interstitialDidDismissScreen( ad: GADInterstitial! )
+    {
+        __admobAds = createAndLoadInterstitial();
     }
     
 }
