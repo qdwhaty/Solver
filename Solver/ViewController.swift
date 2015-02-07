@@ -25,8 +25,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UIWebViewDelegate, 
         super.viewDidLoad()
         //
         l.backgroundColor = UIColor.grayColor().CGColor
-        l.borderWidth = 1.0
-        l.borderColor = UIColor.blackColor().CGColor
+        l.borderWidth = 10.0
+        l.borderColor = UIColor.clearColor().CGColor
         l.shadowOpacity = 0.7
         l.shadowRadius = 10.0
         

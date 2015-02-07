@@ -37,9 +37,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M4s-Oz-vtG" userLabel="Keyboard View">
                                 <rect key="frame" x="58" y="66" width="484" height="484"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bkgn" translatesAutoresizingMaskIntoConstraints="NO" id="5BK-Gb-K8r">
-                                        <rect key="frame" x="0.0" y="0.0" width="484" height="484"/>
-                                    </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ct4-83-8dI" userLabel="Content View">
                                         <rect key="frame" x="50" y="50" width="384" height="384"/>
                                         <subviews>
@@ -482,12 +479,10 @@
                                         <variation key="heightClass=regular" constant="0.0"/>
                                         <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                                     </constraint>
-                                    <constraint firstItem="5BK-Gb-K8r" firstAttribute="top" secondItem="M4s-Oz-vtG" secondAttribute="top" id="CMT-aS-CEO"/>
                                     <constraint firstAttribute="trailing" secondItem="ct4-83-8dI" secondAttribute="trailing" constant="50" id="HVn-Ik-tzz">
                                         <variation key="heightClass=regular" constant="50"/>
                                         <variation key="heightClass=regular-widthClass=compact" constant="25"/>
                                     </constraint>
-                                    <constraint firstItem="5BK-Gb-K8r" firstAttribute="leading" secondItem="M4s-Oz-vtG" secondAttribute="leading" id="Z0W-qy-M3U"/>
                                     <constraint firstItem="ct4-83-8dI" firstAttribute="leading" secondItem="M4s-Oz-vtG" secondAttribute="leading" constant="50" id="jYA-Kd-cvc">
                                         <variation key="heightClass=regular" constant="50"/>
                                         <variation key="heightClass=regular-widthClass=compact" constant="25"/>
@@ -500,23 +495,14 @@
                                         <variation key="heightClass=regular" constant="50"/>
                                         <variation key="heightClass=regular-widthClass=compact" constant="25"/>
                                     </constraint>
-                                    <constraint firstAttribute="bottom" secondItem="5BK-Gb-K8r" secondAttribute="bottom" id="pHV-sR-cp6"/>
-                                    <constraint firstAttribute="trailing" secondItem="5BK-Gb-K8r" secondAttribute="trailing" id="wDO-1a-Ht8"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="5BK-Gb-K8r"/>
-                                    </mask>
-                                </variation>
                                 <variation key="heightClass=regular">
                                     <mask key="subviews">
-                                        <exclude reference="5BK-Gb-K8r"/>
                                         <include reference="ct4-83-8dI"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="subviews">
-                                        <exclude reference="5BK-Gb-K8r"/>
                                         <include reference="ct4-83-8dI"/>
                                     </mask>
                                 </variation>
@@ -625,7 +611,6 @@
         <image name="8" width="93" height="92"/>
         <image name="9" width="93" height="92"/>
         <image name="X" width="93" height="93"/>
-        <image name="bkgn" width="626" height="628"/>
         <image name="del" width="92" height="93"/>
         <image name="del_all" width="206" height="93"/>
         <image name="dot" width="93" height="93"/>
