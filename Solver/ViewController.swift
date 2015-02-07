@@ -13,14 +13,25 @@ class ViewController: UIViewController, UITextFieldDelegate, UIWebViewDelegate, 
     @IBOutlet var __inputTfd: UITextField!
     @IBOutlet var __keyboardView : UIView!
     @IBOutlet var __webView: UIWebView!
-    
+    var l: CALayer{
+        return __keyboardView.layer
+    }
+
     private var __admobAds: GADInterstitial!
     private var __counter:uint = 0
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        //
+        l.backgroundColor = UIColor.grayColor().CGColor
+        l.borderWidth = 1.0
+        l.borderColor = UIColor.blackColor().CGColor
+        l.shadowOpacity = 0.7
+        l.shadowRadius = 10.0
         
+        
+        //
         UIApplication.sharedApplication().statusBarHidden = true;
         
         __webView.delegate = self;
