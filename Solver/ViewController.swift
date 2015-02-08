@@ -188,7 +188,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIWebViewDelegate, 
             }
         }
         
-        __webView.loadRequest( NSURLRequest( URL: NSURL( string: "http://www.geteasysolution.com/" + equationStr__.stringByAddingPercentEscapesUsingEncoding( NSUTF8StringEncoding )! )! ) );
+        __webView.loadRequest( NSURLRequest( URL: NSURL( string: "http://www.geteasysolution.com/api/solve/pl/" + equationStr__.stringByAddingPercentEscapesUsingEncoding( NSUTF8StringEncoding )! )! ) );
     }
     
     func hideKeyboard( time:NSTimeInterval, delay:NSTimeInterval )
