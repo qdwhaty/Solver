@@ -5,16 +5,16 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>D8A61969-EEE5-42D5-BFE1-9F22DF044B40</string>
+	<string>6A35339A-176E-4EBE-82D7-6D0725B1D014</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Solver</string>
+	<string>EquationSolver</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>08771EBB4A260EDD3AFC9272F8CAAD4695D65B3F</key>
 		<string>https://github.com/qdwhaty/Solver.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Solver.xcworkspace</string>
+	<string>EquationSolver.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>08771EBB4A260EDD3AFC9272F8CAAD4695D65B3F</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>08771EBB4A260EDD3AFC9272F8CAAD4695D65B3F</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Solver</string>
+			<string>reklama</string>
 		</dict>
 	</array>
 </dict>

@@ -44,14 +44,14 @@
 		6CAED919B962F61FC12AB4B3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7B50E13ED5BE6C38F2995DA5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8B812A921A82CC17005384A2 /* Solver-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Solver-Bridging-Header.h"; sourceTree = "<group>"; };
-		8B8625D91A69241900EA3BC4 /* Solver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Solver.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B8625D91A69241900EA3BC4 /* EquationSolver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EquationSolver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B8625DD1A69241900EA3BC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B8625DE1A69241900EA3BC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B8625E01A69241900EA3BC4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8B8625E31A69241900EA3BC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8B8625E51A69241900EA3BC4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8B8625E81A69241900EA3BC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		8B8625EE1A69241900EA3BC4 /* SolverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SolverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B8625EE1A69241900EA3BC4 /* EquationSolverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EquationSolverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B8625F31A69241900EA3BC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B8625F41A69241900EA3BC4 /* SolverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolverTests.swift; sourceTree = "<group>"; };
 		8BDA546F1A6AEA5D009A7A6D /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
@@ -103,8 +103,8 @@
 		8B8625DA1A69241900EA3BC4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8B8625D91A69241900EA3BC4 /* Solver.app */,
-				8B8625EE1A69241900EA3BC4 /* SolverTests.xctest */,
+				8B8625D91A69241900EA3BC4 /* EquationSolver.app */,
+				8B8625EE1A69241900EA3BC4 /* EquationSolverTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -161,9 +161,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8B8625D81A69241900EA3BC4 /* Solver */ = {
+		8B8625D81A69241900EA3BC4 /* EquationSolver */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8B8625F81A69241900EA3BC4 /* Build configuration list for PBXNativeTarget "Solver" */;
+			buildConfigurationList = 8B8625F81A69241900EA3BC4 /* Build configuration list for PBXNativeTarget "EquationSolver" */;
 			buildPhases = (
 				24C6FD40D5E3F6B27DB32B5A /* Check Pods Manifest.lock */,
 				8B8625D51A69241900EA3BC4 /* Sources */,
@@ -175,14 +175,14 @@
 			);
 			dependencies = (
 			);
-			name = Solver;
+			name = EquationSolver;
 			productName = Solver;
-			productReference = 8B8625D91A69241900EA3BC4 /* Solver.app */;
+			productReference = 8B8625D91A69241900EA3BC4 /* EquationSolver.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8B8625ED1A69241900EA3BC4 /* SolverTests */ = {
+		8B8625ED1A69241900EA3BC4 /* EquationSolverTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8B8625FB1A69241900EA3BC4 /* Build configuration list for PBXNativeTarget "SolverTests" */;
+			buildConfigurationList = 8B8625FB1A69241900EA3BC4 /* Build configuration list for PBXNativeTarget "EquationSolverTests" */;
 			buildPhases = (
 				8B8625EA1A69241900EA3BC4 /* Sources */,
 				8B8625EB1A69241900EA3BC4 /* Frameworks */,
@@ -193,9 +193,9 @@
 			dependencies = (
 				8B8625F01A69241900EA3BC4 /* PBXTargetDependency */,
 			);
-			name = SolverTests;
+			name = EquationSolverTests;
 			productName = SolverTests;
-			productReference = 8B8625EE1A69241900EA3BC4 /* SolverTests.xctest */;
+			productReference = 8B8625EE1A69241900EA3BC4 /* EquationSolverTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -217,7 +217,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8B8625D41A69241900EA3BC4 /* Build configuration list for PBXProject "Solver" */;
+			buildConfigurationList = 8B8625D41A69241900EA3BC4 /* Build configuration list for PBXProject "EquationSolver" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -230,8 +230,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8B8625D81A69241900EA3BC4 /* Solver */,
-				8B8625ED1A69241900EA3BC4 /* SolverTests */,
+				8B8625D81A69241900EA3BC4 /* EquationSolver */,
+				8B8625ED1A69241900EA3BC4 /* EquationSolverTests */,
 			);
 		};
 /* End PBXProject section */
@@ -315,7 +315,7 @@
 /* Begin PBXTargetDependency section */
 		8B8625F01A69241900EA3BC4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8B8625D81A69241900EA3BC4 /* Solver */;
+			target = 8B8625D81A69241900EA3BC4 /* EquationSolver */;
 			targetProxy = 8B8625EF1A69241900EA3BC4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -458,7 +458,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Solver/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = EquationSolver;
 				SWIFT_OBJC_BRIDGING_HEADER = "Solver-Bridging-Header.h";
 			};
 			name = Debug;
@@ -471,7 +471,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Solver/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = EquationSolver;
 				SWIFT_OBJC_BRIDGING_HEADER = "Solver-Bridging-Header.h";
 			};
 			name = Release;
@@ -490,8 +490,8 @@
 				);
 				INFOPLIST_FILE = SolverTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Solver.app/Solver";
+				PRODUCT_NAME = EquationSolverTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EquationSolver.app/EquationSolver";
 			};
 			name = Debug;
 		};
@@ -505,15 +505,15 @@
 				);
 				INFOPLIST_FILE = SolverTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Solver.app/Solver";
+				PRODUCT_NAME = EquationSolverTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EquationSolver.app/EquationSolver";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8B8625D41A69241900EA3BC4 /* Build configuration list for PBXProject "Solver" */ = {
+		8B8625D41A69241900EA3BC4 /* Build configuration list for PBXProject "EquationSolver" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8B8625F61A69241900EA3BC4 /* Debug */,
@@ -522,7 +522,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8B8625F81A69241900EA3BC4 /* Build configuration list for PBXNativeTarget "Solver" */ = {
+		8B8625F81A69241900EA3BC4 /* Build configuration list for PBXNativeTarget "EquationSolver" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8B8625F91A69241900EA3BC4 /* Debug */,
@@ -531,7 +531,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8B8625FB1A69241900EA3BC4 /* Build configuration list for PBXNativeTarget "SolverTests" */ = {
+		8B8625FB1A69241900EA3BC4 /* Build configuration list for PBXNativeTarget "EquationSolverTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8B8625FC1A69241900EA3BC4 /* Debug */,
